@@ -9,26 +9,18 @@ const SliderContainer = styled.div`
 const SliderContainerImg = styled.div`
   display: flex;
   max-width: 480px; 
+  aspect-ratio: 1 / 1;
   overflow: hidden;  
 `;
 
 const SliderImg = styled.img`
   width: 100%;
   opacity: 0;
-  
   &.slider_action{
-    animation : 1000ms ease 0s alternate view-image;
+    transition:opacity 1500ms ;
     opacity: 1;
   }
 
-  @keyframes view-image {
-   from{
-    opacity: 0;
-   } 
-   to{
-    opacity: 1;
-   }
-  }
 `;
 
 const SliderButtonContainer = styled.div`
