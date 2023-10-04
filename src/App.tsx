@@ -9,10 +9,19 @@ const App = () => {
 
   return (
     <>
+      <h1>Slider</h1>
+      <p>autoPlay=false showButton=true</p>
       <Slider images={images} autoPlay={false} showButton={true} />
+      <hr />
+      <p>autoPlay=true showButton=false</p>
       <Slider images={images} autoPlay={true} showButton={false} />
+      <hr />
+      <p>autoPlay=true showButton=true</p>
       <Slider images={images} autoPlay={true} showButton={true} />
+      <hr />
+      <p>autoPlay=false showButton=false</p>
       <Slider images={images} autoPlay={false} showButton={false} />
+      <hr />
     </>
   );
 }
