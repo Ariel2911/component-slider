@@ -24,14 +24,14 @@ export const Slider = (props: Props): JSX.Element => {
     }
   }, [selectedIndex])
 
-  const selectedNewImage = (next: string, index: number) => {
+  const selectedNewImage = (next: string) => {
     setLoaded(false)
 
     if (next === 'next')
     {
 
-      const condition = index < props.images.length - 1
-      condition ? setSelectedIndex(index + 1) : setSelectedIndex(0)
+      const condition = selectedIndex < props.images.length - 1
+      condition ? setSelectedIndex(selectedIndex + 1) : setSelectedIndex(0)
 
     } else
     {
@@ -43,9 +43,9 @@ export const Slider = (props: Props): JSX.Element => {
 
   };
 
-  const previous = () => { selectedNewImage('', selectedIndex); };
+  const previous = () => { selectedNewImage(''); };
 
-  const next = () => { selectedNewImage('next', selectedIndex); };
+  const next = () => { selectedNewImage('next'); };
 
   return (
     <SliderContainer>
